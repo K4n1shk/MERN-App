@@ -7,6 +7,7 @@ import {
   HomeIcon,
   XIcon,
   IdentificationIcon,
+  MenuIcon
 } from '@heroicons/react/outline'
 
 const solutions = [
@@ -35,30 +36,33 @@ const Navbar = () => {
           <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               <NavLink to={"#"}>
-                <span className="sr-only">Workflow</span>
-                <img
-                  className="h-8 w-auto sm:h-10"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                  alt=""
-                />
+                <span className="text-base font-medium text-gray-500 hover:text-[#14c871]">OAMS</span>
+                <span> | </span>
+                <span className="text-base font-medium text-gray-500 hover:text-[#14c871]">IIITDM Kurnool</span>
               </NavLink>
             </div>
+            <div className="-mr-2 -my-2 md:hidden">
+              <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <span className="sr-only">Open menu</span>
+                <MenuIcon className="h-6 w-6" aria-hidden="true" />
+              </Popover.Button>
+            </div>
             <Popover.Group as="nav" className="hidden md:flex space-x-10">
-              <NavLink to={"/"} className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <NavLink to={"/"} className="text-base font-medium text-gray-500 hover:text-[#14c871]">
                 Home
               </NavLink>
-              <NavLink to={"/about"} className="text-base font-medium text-gray-500 hover:text-gray-900">
-                About
+              <NavLink to={"/about"} className="text-base font-medium text-gray-500 hover:text-[#14c871]">
+                Profile
               </NavLink>
-              <NavLink to={"/contact"} className="text-base font-medium text-gray-500 hover:text-gray-900">
+              <NavLink to={"/contact"} className="text-base font-medium text-gray-500 hover:text-[#14c871]">
                 Contact
               </NavLink>
             </Popover.Group>
             <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-              <NavLink to={"/login"} className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+              <NavLink to={"/login"} className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-[#14c871]">
                 Sign in
               </NavLink>
-              <NavLink to={"/signup"} className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+              <NavLink to={"/signup"} className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#14c871] hover:bg-[#206bfb]">
                 Sign up
               </NavLink>
             </div>
@@ -79,11 +83,9 @@ const Navbar = () => {
               <div className="pt-5 pb-6 px-5">
                 <div className="flex items-center justify-between">
                   <div>
-                    <img
-                      className="h-8 w-auto"
-                      src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                      alt="Workflow"
-                    />
+                    <span className="text-base font-medium text-gray-500 hover:text-[#14c871]">OAMS</span>
+                    <span> | </span>
+                    <span className="text-base font-medium text-gray-500 hover:text-[#14c871]">IIITDM Kurnool</span>
                   </div>
                   <div className="-mr-2">
                     <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
@@ -100,7 +102,7 @@ const Navbar = () => {
                         to={item.href}
                         className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
                       >
-                        <item.icon className="flex-shrink-0 h-6 w-6 text-indigo-600" aria-hidden="true" />
+                        <item.icon className="flex-shrink-0 h-6 w-6 text-[#14c871]" aria-hidden="true" />
                         <span className="ml-3 text-base font-medium text-gray-900">{item.name}</span>
                       </NavLink>
                     ))}
@@ -111,13 +113,13 @@ const Navbar = () => {
                 <div>
                   <NavLink
                     to={"/signup"}
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-[#14c871] hover:bg-[#206bfb]"
                   >
                     Sign up
                   </NavLink>
                   <p className="mt-6 text-center text-base font-medium text-gray-500">
                     Existing User?{' '}
-                    <NavLink to={"/login"} className="text-indigo-600 hover:text-indigo-500">
+                    <NavLink to={"/login"} className="text-[#14c871] hover:text-[#206bfb]">
                       Sign in
                     </NavLink>
                   </p>
