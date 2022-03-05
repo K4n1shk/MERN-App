@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 const Login = () => {
   return (
     <div>
-      <div className="mt-10 bg-green-50 min-h-full py-12 px-4 sm:px-6 lg:px-8 md:w-2/4 sm:w-full 2xl:w-1/4 mx-auto rounded-lg shadow-md hover:shadow-lg">
+      <div className="mt-10 bg-white min-h-full py-12 px-4 sm:px-6 lg:px-8 md:w-2/4 sm:w-full 2xl:w-1/4 mx-auto rounded-lg shadow-lg hover:shadow-md">
         <div className="mx-auto max-w-md w-full space-y-8">
           <div>
             <h2 className="mt-6 text-center text-3xl font-bold text-gray-900">Sign In</h2>
@@ -12,7 +12,8 @@ const Login = () => {
           <form className="mt-12 space-y-6" action="#" method="POST">
             <input type="hidden" name="remember" defaultValue="true" />
             <div className="rounded-md shadow-sm -space-y-px ">
-              <div className='mb-2'>
+              <div className='mb-4'>
+                <div class="text-sm font-bold text-gray-700 tracking-wide mb-1 ml-1">Email Address</div>
                 <label htmlFor="email-address" className="sr-only">
                   Email address
                 </label>
@@ -27,6 +28,7 @@ const Login = () => {
                 />
               </div>
               <div>
+                <div class="text-sm font-bold text-gray-700 tracking-wide mb-1 ml-1">Password</div>
                 <label htmlFor="password" className="sr-only">
                   Password
                 </label>
@@ -61,7 +63,6 @@ const Login = () => {
                 </NavLink>
               </div>
             </div>
-
             <div>
               <button
                 type="submit"
@@ -74,6 +75,9 @@ const Login = () => {
               </button>
             </div>
           </form>
+          <div class="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
+            Don't have an account ? <a class="cursor-pointer text-green-600 hover:text-indigo-800">Sign up</a>
+          </div>
         </div>
       </div>
     </div>
